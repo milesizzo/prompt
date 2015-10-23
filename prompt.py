@@ -34,8 +34,7 @@ class PromptServer(WebSocket):
 		for client in clients:
 			print client.formatAddress()
 
-def run(serverType):
-	port = 5167
+def run(serverType, port=5167):
 	print "Starting server (port %d)" % port
 	server = SimpleWebSocketServer('', port, serverType)
 	server.serveforever()
